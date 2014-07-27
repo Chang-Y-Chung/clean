@@ -1,0 +1,139 @@
+# Code book: {fn}.csv
+
+This tidy dataset is derived from Reyes-Ortiz et. al. "Human
+Activity Recognition Using Smartphones Dataset" documented
+at the UCI Machine Learning Repository at:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Actual data and documentation zip file is downloaded from
+Coursera site at:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+We will refer this downloaded data and documentation as *UCI data*
+
+## Study design
+
+For the information regarding experimental study that collected see the documentation files
+that accompanied UCI data, which is copied below as well.
+
+### UCI data study design description
+
+The experiments have been carried out with a group of 30 volunteers within an
+age bracket of 19-48 years. Each person performed six activities (WALKING,
+WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a
+smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer
+and gyroscope, we captured 3-axial linear acceleration and 3-axial angular
+velocity at a constant rate of 50Hz. The experiments have been video-recorded
+to label the data manually. The obtained dataset has been randomly partitioned
+into two sets, where 70% of the volunteers was selected for generating the
+training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying
+noise filters and then sampled in fixed-width sliding windows of 2.56 sec and
+50% overlap (128 readings/window). The sensor acceleration signal, which has
+gravitational and body motion components, was separated using a Butterworth
+low-pass filter into body acceleration and gravity. The gravitational force is
+assumed to have only low frequency components, therefore a filter with 0.3 Hz
+cutoff frequency was used. From each window, a vector of features was obtained
+by calculating variables from the time and frequency domain. See
+'features_info.txt' for more details. 
+
+### tidy data
+
+This tidy data, averages.for.each.activity.and.subject.txt, is created from
+uci data by combining uci test and training data and subject id, activity
+label together and aggregating using mean within each subject id and activity
+for a subset of uci measures. For the detailed description of this derivation
+process, see the readme.md.
+
+## Code book
+
+| uci data | tidy data column name (descriptive and long)                                                            | unit |
+| column # |                                                                                                         |      |
+|:---------|:--------------------------------------------------------------------------------------------------------|------|
+| see note |subject.id                                                                                               |      |
+| see note |activity                                                                                                 |      |
+|1         |time.to.body.acceleration.mean.along.x.axis                                                              | mean |
+|2         |time.to.body.acceleration.mean.along.y.axis                                                              | mean |
+|3         |time.to.body.acceleration.mean.along.z.axis                                                              | mean |
+|4         |time.to.body.acceleration.standard.deviation.along.x.axis                                                | mean |
+|5         |time.to.body.acceleration.standard.deviation.along.y.axis                                                | mean |
+|6         |time.to.body.acceleration.standard.deviation.along.z.axis                                                | mean |
+|41        |time.to.Gravity.acceleration.mean.along.x.axis                                                           | mean |
+|42        |time.to.Gravity.acceleration.mean.along.y.axis                                                           | mean |
+|43        |time.to.Gravity.acceleration.mean.along.z.axis                                                           | mean |
+|44        |time.to.Gravity.acceleration.standard.deviation.along.x.axis                                             | mean |
+|45        |time.to.Gravity.acceleration.standard.deviation.along.y.axis                                             | mean |
+|46        |time.to.Gravity.acceleration.standard.deviation.along.z.axis                                             | mean |
+|81        |time.to.body.acceleration.jerk.signal.mean.along.x.axis                                                  | mean |
+|82        |time.to.body.acceleration.jerk.signal.mean.along.y.axis                                                  | mean |
+|83        |time.to.body.acceleration.jerk.signal.mean.along.z.axis                                                  | mean |
+|84        |time.to.body.acceleration.jerk.signal.standard.deviation.along.x.axis                                    | mean |
+|85        |time.to.body.acceleration.jerk.signal.standard.deviation.along.y.axis                                    | mean |
+|86        |time.to.body.acceleration.jerk.signal.standard.deviation.along.z.axis                                    | mean |
+|121       |time.to.body.angular.velocity.mean.along.x.axis                                                          | mean |
+|122       |time.to.body.angular.velocity.mean.along.y.axis                                                          | mean |
+|123       |time.to.body.angular.velocity.mean.along.z.axis                                                          | mean |
+|124       |time.to.body.angular.velocity.standard.deviation.along.x.axis                                            | mean |
+|125       |time.to.body.angular.velocity.standard.deviation.along.y.axis                                            | mean |
+|126       |time.to.body.angular.velocity.standard.deviation.along.z.axis                                            | mean |
+|161       |time.to.body.angular.velocity.jerk.signal.mean.along.x.axis                                              | mean |
+|162       |time.to.body.angular.velocity.jerk.signal.mean.along.y.axis                                              | mean |
+|163       |time.to.body.angular.velocity.jerk.signal.mean.along.z.axis                                              | mean |
+|164       |time.to.body.angular.velocity.jerk.signal.standard.deviation.along.x.axis                                | mean |
+|165       |time.to.body.angular.velocity.jerk.signal.standard.deviation.along.y.axis                                | mean |
+|166       |time.to.body.angular.velocity.jerk.signal.standard.deviation.along.z.axis                                | mean |
+|201       |time.to.body.acceleration.magnitude.mean                                                                 | mean |
+|202       |time.to.body.acceleration.magnitude.standard.deviation                                                   | mean |
+|214       |time.to.Gravity.acceleration.magnitude.mean                                                              | mean |
+|215       |time.to.Gravity.acceleration.magnitude.standard.deviation                                                | mean |
+|227       |time.to.body.acceleration.jerk.signal.magnitude.mean                                                     | mean |
+|228       |time.to.body.acceleration.jerk.signal.magnitude.standard.deviation                                       | mean |
+|240       |time.to.body.angular.velocity.magnitude.mean                                                             | mean |
+|241       |time.to.body.angular.velocity.magnitude.standard.deviation                                               | mean |
+|253       |time.to.body.angular.velocity.jerk.signal.magnitude.mean                                                 | mean |
+|254       |time.to.body.angular.velocity.jerk.signal.magnitude.standard.deviation                                   | mean |
+|266       |fft.transformed.frequency.body.acceleration.mean.along.x.axis                                            | mean |
+|267       |fft.transformed.frequency.body.acceleration.mean.along.y.axis                                            | mean |
+|268       |fft.transformed.frequency.body.acceleration.mean.along.z.axis                                            | mean |
+|269       |fft.transformed.frequency.body.acceleration.standard.deviation.along.x.axis                              | mean |
+|270       |fft.transformed.frequency.body.acceleration.standard.deviation.along.y.axis                              | mean |
+|271       |fft.transformed.frequency.body.acceleration.standard.deviation.along.z.axis                              | mean |
+|294       |fft.transformed.frequency.body.acceleration.weighted.average.of.frequency.along.x.axis                   | mean |
+|295       |fft.transformed.frequency.body.acceleration.weighted.average.of.frequency.along.y.axis                   | mean |
+|296       |fft.transformed.frequency.body.acceleration.weighted.average.of.frequency.along.z.axis                   | mean |
+|345       |fft.transformed.frequency.body.acceleration.jerk.signal.mean.along.x.axis                                | mean |
+|346       |fft.transformed.frequency.body.acceleration.jerk.signal.mean.along.y.axis                                | mean |
+|347       |fft.transformed.frequency.body.acceleration.jerk.signal.mean.along.z.axis                                | mean |
+|348       |fft.transformed.frequency.body.acceleration.jerk.signal.standard.deviation.along.x.axis                  | mean |
+|349       |fft.transformed.frequency.body.acceleration.jerk.signal.standard.deviation.along.y.axis                  | mean |
+|350       |fft.transformed.frequency.body.acceleration.jerk.signal.standard.deviation.along.z.axis                  | mean |
+|373       |fft.transformed.frequency.body.acceleration.jerk.signal.weighted.average.of.frequency.along.x.axis       | mean |
+|374       |fft.transformed.frequency.body.acceleration.jerk.signal.weighted.average.of.frequency.along.y.axis       | mean |
+|375       |fft.transformed.frequency.body.acceleration.jerk.signal.weighted.average.of.frequency.along.z.axis       | mean |
+|424       |fft.transformed.frequency.body.angular.velocity.mean.along.x.axis                                        | mean |
+|425       |fft.transformed.frequency.body.angular.velocity.mean.along.y.axis                                        | mean |
+|426       |fft.transformed.frequency.body.angular.velocity.mean.along.z.axis                                        | mean |
+|427       |fft.transformed.frequency.body.angular.velocity.standard.deviation.along.x.axis                          | mean |
+|428       |fft.transformed.frequency.body.angular.velocity.standard.deviation.along.y.axis                          | mean |
+|429       |fft.transformed.frequency.body.angular.velocity.standard.deviation.along.z.axis                          | mean |
+|452       |fft.transformed.frequency.body.angular.velocity.weighted.average.of.frequency.along.x.axis               | mean |
+|453       |fft.transformed.frequency.body.angular.velocity.weighted.average.of.frequency.along.y.axis               | mean |
+|454       |fft.transformed.frequency.body.angular.velocity.weighted.average.of.frequency.along.z.axis               | mean |
+|503       |fft.transformed.frequency.body.acceleration.magnitude.mean                                               | mean |
+|504       |fft.transformed.frequency.body.acceleration.magnitude.standard.deviation                                 | mean |
+|513       |fft.transformed.frequency.body.acceleration.magnitude.weighted.average.of.frequency                      | mean |
+|516       |fft.transformed.frequency.body.body.acceleration.jerk.signal.magnitude.mean                              | mean |
+|517       |fft.transformed.frequency.body.body.acceleration.jerk.signal.magnitude.standard.deviation                | mean |
+|526       |fft.transformed.frequency.body.body.acceleration.jerk.signal.magnitude.weighted.average.of.frequency     | mean |
+|529       |fft.transformed.frequency.body.body.angular.velocity.magnitude.mean                                      | mean |
+|530       |fft.transformed.frequency.body.body.angular.velocity.magnitude.standard.deviation                        | mean |
+|539       |fft.transformed.frequency.body.body.angular.velocity.magnitude.weighted.average.of.frequency             | mean |
+|542       |fft.transformed.frequency.body.body.angular.velocity.jerk.signal.magnitude.mean                          | mean |
+|543       |fft.transformed.frequency.body.body.angular.velocity.jerk.signal.magnitude.standard.deviation            | mean |
+|552       |fft.transformed.frequency.body.body.angular.velocity.jerk.signal.magnitude.weighted.average.of.frequency | mean |
+
+NOTE: the column number refers to those in the uci data files, X_test.txt and X_train.txt, except for the first two
+(subject.id and activity). Subject.id came from the uci data files, subject_test.txt and subject_train.txt.
+Activities come from the uci data file, activity_label.txt.
+
