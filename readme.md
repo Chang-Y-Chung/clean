@@ -1,4 +1,6 @@
-# Read me for averages.for.each.activity.and.subject.txt
+# Read me for tidy data
+
+tidy data: averages.for.each.activity.and.subject.txt
 
 This data set is derived from the UCI data downloaded from
 the course web site:

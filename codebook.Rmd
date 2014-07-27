@@ -1,4 +1,4 @@
-# Code book: {fn}.csv
+# Code book: averages.for.each.activity.and.subject.txt
 
 This tidy dataset is derived from Reyes-Ortiz et. al. "Human
 Activity Recognition Using Smartphones Dataset" documented
