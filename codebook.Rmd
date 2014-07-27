@@ -48,8 +48,7 @@ process, see the readme.md.
 
 ## Code book
 
-| uci data | tidy data column name (descriptive and long)                                                            | unit |
-| column # |                                                                                                         |      |
+| uci col  | tidy data column name (descriptive and long)                                                            | unit |
 |:---------|:--------------------------------------------------------------------------------------------------------|------|
 | see note |subject.id                                                                                               |      |
 | see note |activity                                                                                                 |      |
